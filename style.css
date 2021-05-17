@@ -1,6 +1,13 @@
-* {
+*, p {
     margin: 0;
     padding: 0;
+}
+
+body {
+    background-color: #fff3e6;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 /*nav section*/
@@ -9,48 +16,64 @@ nav {
     background-color: #0d335d;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 5px 0;
+    padding: 20px 0;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 2.6em;
+    font-weight: bolder;
+    margin-bottom: 10px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-}
-
-.logo {
-    text-decoration: none;
-    font-size: 3em;
-    font-weight: bolder;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
 .nav-item a {
     text-decoration: none;
     font-size: 1.5em;
     flex: 1;
-    
 }
 
 nav a {
     color: white;
-    margin: 15px 17.5px;
 }
 
 .nav-links a:hover {
     color: #c1a1d3;
 }
 
+.intro-a {
+    text-decoration: underline;
+    color: #c1a1d3;
+    font-weight: bolder;
+}
+
+.intro ul li {
+    list-style: none;
+}
+
+/* .intro ul {
+    padding-left: 10%;
+} */
+
 
 /*intro section*/
 
 .intro {
-    background-color: #fff3e6;
     color: #0d335d;
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     font-size: 1.5em;
+    margin: 5%;
 }
 
 span {
@@ -59,52 +82,38 @@ span {
 
 .intro img {
     width: 100%;
+    margin-bottom: 5%;
 }
 
-.intro .item {
-    flex: 1;
-}
-
-.intro .pic {
-    margin: 5% 4% 5% 10%;
-}
-
-.intro .string {
-    margin: 5% 10% 5% 4%;
+.string {
+    width: 100%;
 }
 
 
 /*main section (about part)*/
 
 .main {
-    background-color: #fff3e6;
     color: #0d335d;
+    background-color: #ecddcc;
+    padding: 5% 0 2.5% 0;
 }
 
-
 .about {
-    background-color: #ecddcc;
     color: #0d335d;
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column-reverse;
     font-size: 1.5em;
-}
-
-.about img {
-    width: 100%;
+    margin: 5%;
 }
 
 .about .item {
     flex: 1;
 }
 
-.about .pic {
-    margin: 5% 10% 5% 4%;
-}
-
-.about .string {
-    margin: 5% 4% 5% 10%;
+.about img {
+    width: 100%;
+    margin-bottom: 5%;
 }
 
 
@@ -113,6 +122,7 @@ span {
 .portfolio {
     color: #0d335d;
     font-size: 1.5em;
+    padding: 5%;
 }
 
 .portfolio img {
@@ -120,13 +130,13 @@ span {
 }
 
 .portfolio h3 {
-    margin: 5% 0 0 10%;
+    margin: 2.5% 0 5% 0;
 }
 
 .itemList {
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .portItem {
@@ -134,57 +144,60 @@ span {
     text-align: center;
 }
 
-.left {
-    margin: 2.5% 4% 5% 10%;
+.portstring {
+    margin: 2% 0 5% 0;
 }
 
-.right {
-    margin: 2.5% 10% 5% 4%;
-}
 
 /*main section (contact part)*/
 
 .contactWrap {
     background-color: #ecddcc;
-    padding-top: 1px;
     color: #0d335d;
+    padding: 5%;
+}
+
+.contactWrap h3 {
+    font-size: 1.5em;
+    margin: 2.5% 0 5% 0;
 }
 
 .contact {
     background-color: #ecddcc;
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
 }
 
 /* .string, .map{
     flex: 1;
 } */
 
-.string {
-    margin: 2.5% 4% 5% 10%;
+.contactWrap .string {
     flex: 1;
 }
 
 .map {
-    margin: 2.5% 10% 5% 4%;
     flex: 2;
+}
+
+form {
+    text-align: center;
 }
 
 form label {
     display: block;
-}
-
-form textarea {
-    display: block;
+    font-size: 1.5em;
 }
 
 form input, textarea {
     width: 100%;
     margin-bottom: 12.5px;
+    text-align: center;
+    font-size: 1.8em;
 }
 
 form input {
-    height: 20px;
+    height: 40px;
 }
 
 .subm {
@@ -217,22 +230,139 @@ footer {
     margin: 1% 0 1.5% 0;
 }
 
+.footEmo {
+    font-size: 1.5em;
+    color: white;
+    margin: 0 10px;
+    background-color: black;
+}
+
 
 /*media*/
 
-@media all and (max-width: 800px) {
-    nav, .intro, .about, .contact {
-        flex-direction: column;
-        margin: 0;
-        padding: 0;
+@media all and (min-width: 750px) {
+
+    body {
+        text-align: left;
     }
 
-    .intro .item, .intro .pic, .string, .intro .string, .about .pic, .about .string, .portfolio h3, .left, .right, .map {
-        margin: 2%;
-        padding: 0;
+/*intro section*/
+
+    .intro {
+        align-items: center;
+        flex-direction: row;
     }
 
-    .navbar{
-        padding-bottom: 17.5px;
+    .intro .item {
+        flex: 1;
     }
+
+    .intro .pic {
+        margin: 5% 4% 5% 10%;
+    }
+
+    .intro .string {
+        margin: 5% 10% 5% 4%;
+    }
+
+
+/*main section (about part)*/
+
+    .about {
+        align-items: center;
+        flex-direction: row;
+        font-size: 1.5em;
+    }
+
+    .about img {
+        width: 100%;
+    }
+
+    .about .item {
+        flex: 1;
+    }
+
+    .about .pic {
+        margin: 5% 10% 5% 4%;
+    }
+
+    .about .string {
+        margin: 5% 4% 5% 10%;
+    }
+
+
+/*main section (portfolio part)*/
+
+    .portfolio h3 {
+        margin: 5% 0 0 10%;
+    }
+
+    .itemList {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .portItem {
+        flex:1;
+        text-align: center;
+    }
+
+    .left {
+        margin: 2.5% 4% 5% 10%;
+    }
+
+    .right {
+        margin: 2.5% 10% 5% 4%;
+    }
+
+/*main section (contact part)*/
+    .contactWrap h3 {
+        margin: 5% 0 0 10%;
+        font-size: 1.755em;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* .string, .map{
+        flex: 1;
+    } */
+
+    .string {
+        margin: 2.5% 4% 5% 10%;
+        flex: 1;
+    }
+
+    .map {
+        margin: 2.5% 10% 5% 4%;
+        flex: 2;
+    }
+
+    form label {
+        display: block;
+    }
+
+    form textarea {
+        display: block;
+    }
+
+    form input, textarea {
+        width: 100%;
+        margin-bottom: 12.5px;
+    }
+
+    form input {
+        height: 20px;
+    }
+
+    .subm {
+        font-size: 1.25em;
+        width: 50%;
+        height: 40px;
+        padding: 5px;
+    }
+
 }
